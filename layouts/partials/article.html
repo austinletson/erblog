@@ -6,8 +6,8 @@
         <h3>
         	{{ if isset .Params "description" }}
 				{{ .Description }}
-			{{ else if gt (len .Summary) 150 }}
-				{{ slicestr .Summary 0 150 }}
+			{{ else if gt (len .Summary) 300 }}
+				{{ slicestr .Summary 0 300 }}
             {{else if .Summary}}
                 {{.Summary}}
             {{end}} ... <a href="{{.Permalink}}"><span style="color:#01AAED">Read More</span></a>
