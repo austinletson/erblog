@@ -3,8 +3,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Austin Letson</title>
+    {{ template "_internal/google_analytics.html" . }}
 
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164106735-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164106735-1');
+    </script>
+
     {{if .Params.tags}}
     <meta content="{{ delimit (union .Params.tags .Params.categories) ", " }}" name="keywords">
     {{else}}
